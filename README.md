@@ -5,6 +5,10 @@
 ## Description
 This is a tutorial for understanding how the regex for matching HTML tags works: /^<([a-z]+)([^<]+)*(?:>(.*)<\/\1>|\s+\/>)$/
 
+You can find the tutorial here: 
+
+https://gist.github.com/mxmar0k/e44ea3ac9359321349d79f37d42f13f5 
+
 ## Table of Contents
 
 [Installation](#installation) [License](#license)
