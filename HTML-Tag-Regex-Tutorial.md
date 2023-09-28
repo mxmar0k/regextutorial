@@ -58,7 +58,21 @@ The "|" character represents the OR operator, like we anticipated earlier. It al
 
 ### Flags
 
+The given regex does not have any flags: /^<([a-z]+)([^<]+)*(?:>(.*)<\/\1>|\s+\/>)$/. 
+
+But what are they?
+
+Flags are usually specified after the closing / in a regex and they modify the search behavior. 
+
+Common flags include "i" for case-insensitive matching, "g" for global matching, and "m" for multi-line matching.
+
+
 ### Character Escapes
+
+Character escapes are sequences that are used to represent special characters in regex. In our regex, we have a few character escapes:
+
+\<: Escapes the < character, allowing it to be matched literally.
+\/: Escapes the / character, allowing it to be matched literally.
 
 ## Author
 
