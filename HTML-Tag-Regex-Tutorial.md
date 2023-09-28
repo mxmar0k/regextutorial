@@ -1,10 +1,14 @@
 # Understanding the HTML Tag Regex
 
-Introductory paragraph (replace this with your text)
+HTML, is without a doubt the backbone of web pages; it is made up of various elements, which are often represented by tags. Web developers sometimes need to parse, sometimes extract, or validate HTML content. This is the main reason where regular expressions come in handy. This tutorial aims to dissect a specific regex that matches an HTML tag, helping you understand its components and how it works.
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+The regex that we're exploring in this tutorial is used to match HTML tags. It's particularly crafted to identify both self-closing tags (<img src="image.jpg" />) and paired tags (<div>content</div>). 
+
+Here's the regex pattern that we will be looking in this tutorial:
+
+/^<([a-z]+)([^<]+)*(?:>(.*)<\/\1>|\s+\/>)$/
 
 ## Table of Contents
 
