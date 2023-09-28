@@ -20,6 +20,7 @@ Here's the regex pattern that we will be looking in this tutorial:
 - [The OR Operator](#the-or-operator)
 - [Flags](#flags)
 - [Character Escapes](#character-escapes)
+- [Example](#Example)
 
 ## Regex Components
 
@@ -52,6 +53,11 @@ Like we said in grouping constructs, [a-z] matches any lowercase letter from 'a'
 
 ### Character Classes
 
+Character classes allow for matching one out of several characters. They are denoted by square brackets []. In our regex:
+
+[a-z]: Represents a character class that matches any lowercase letter from a to z.
+[^<]: This is a negated character class. The ^ symbol at the start of the class negates the character set, meaning it matches any character that is not a <.
+
 ### The OR Operator
 
 The "|" character represents the OR operator, like we anticipated earlier. It allows the regex to match one of several patterns. In our regex, it differentiates between paired tags and self-closing tags.
@@ -74,6 +80,67 @@ Character escapes are sequences that are used to represent special characters in
 \<: Escapes the < character, allowing it to be matched literally.
 \/: Escapes the / character, allowing it to be matched literally.
 
+### Example
+
+Now that we have all this information, we will use a metaphor to explain the regex. But how?
+
+Imagine the regex is a toy assembly line, and each component of the regex is a station on that line where a toy like Rex on toy story (our HTML string) is being assembled.
+
+The Toy Assembly Line: Building an HTML Tag Toy
+Regex: /^<([a-z]+)([^<]+)*(?:>(.*)<\/\1>|\s+\/>)$/
+
+Start of the Line (^):
+This is where our toy begins its journey. Every toy must start here.
+
+The < Character:
+Think of this as the base of our toy. Every toy (HTML tag) has this base.
+
+The ([a-z]+) Group:
+This is where we choose the color of our toy. Each color is represented by a letter from 'a' to 'z'. If our toy is a 'div' toy, then it's colored 'div'.
+
+The ([^<]+)* Group:
+This is the decoration station. Here, our toy can get stickers, buttons, or other decorations, BUT these decorations can't have the shape of the base (<), because that's reserved for the toy's base.
+
+The (?:>(.*)<\/\1>|\s+\/>) Group:
+This is the final assembly station with two machines:
+
+The first machine is for toys that have content inside, like a music box. The toy is closed with a lid that matches its color (like </div> for a 'div' toy).
+The second machine is for toys that don't open and are sealed shut, like a whistle.
+End of the Line ($):
+This is where our assembled toy comes out, ready to be played with. Every toy must pass through here.
+
+Toy Examples:
+
+1.- Toy: <div>Music Box Tune</div>
+
+Starts at the beginning.
+Gets a 'div' color.
+Skips decorations.
+Goes through the first machine and gets a musical tune inside. It's sealed with a 'div' colored lid.
+Comes out ready to play!
+
+
+2.- Toy: <whistle />
+
+Starts at the beginning.
+Gets a 'whistle' color.
+Skips decorations.
+Goes through the second machine and is sealed shut.
+Comes out ready to be blown!
+
+
+And that's how our toy assembly line (regex) builds HTML tag toys! 🧸🎨🎵
+
+I hope this was clear for youuuu!
+
+But if you have any doubts, please feel free to contact me.
+
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+Follow me on https://github.com/mxmar0k
+
+Deployed GitHub-Gist:
+
+Repository: https://github.com/mxmar0k/regextutorial
+
+
