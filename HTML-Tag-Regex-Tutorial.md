@@ -1,4 +1,4 @@
-# Title (replace with your title)
+# Understanding the HTML Tag Regex
 
 Introductory paragraph (replace this with your text)
 
